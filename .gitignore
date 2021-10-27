@@ -1,0 +1,14 @@
+package-lock.json
+
+# Debug log from npm
+npm-debug.log
+
+#Uploads Directory
+uploads
+
+#node_modules Directory
+node_modules/
+
+.idea
+.vscode
+

@@ -4,20 +4,21 @@
   "protocol" : "http",
   "secretKey": "secret",
   "database": {
-    "client": "mysql2",
+    "client": "pg",
     "connection": {
-      "database": "test_project",
-      "user": "root",
-      "password": "123"
+      "host": "localhost",
+      "user": "postgres",
+      "password": "123",
+      "database": "test"
     },
     "pool": {
       "min": 2,
       "max": 10
     },
     "migrations": {
-      "tableName": "knex_migrations"
+      "tableName": "migrations"
     }
- },
+  },
   "timeouts": {
     "login": "1d",
     "forgotPassword": "1d",

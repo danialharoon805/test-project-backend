@@ -61,7 +61,9 @@ class NewsPostManager {
 
       console.log('addView:: View Added');
 
-      return;
+      const views = await NewsPostHandler.getViewsOfPost(data.post_id);
+
+      return views[0];
 
     }
 
@@ -75,13 +77,17 @@ class NewsPostManager {
 
       console.log('addView:: View Added');
 
-      return;
+      const views = await NewsPostHandler.getViewsOfPost(data.post_id);
+
+      return views[0];
 
     }
 
     console.log(`addView:: already viewed. `);
 
-    return;
+    const views = await NewsPostHandler.getViewsOfPost(data.post_id);
+
+    return views[0];
 
   }
 
@@ -97,7 +103,9 @@ class NewsPostManager {
 
       console.log('addLike:: Like Added');
 
-      return;
+      const likes = await NewsPostHandler.getLikesOfPost(data.post_id);
+
+      return likes[0];
 
     }
 
@@ -111,13 +119,17 @@ class NewsPostManager {
 
       console.log('addLike:: Like Added');
 
-      return;
+      const likes = await NewsPostHandler.getLikesOfPost(data.post_id);
+
+      return likes[0];
 
     }
 
     console.log(`addLike:: already liked. `);
 
-    return;
+    const likes = await NewsPostHandler.getLikesOfPost(data.post_id);
+
+    return likes[0];
 
   }
 

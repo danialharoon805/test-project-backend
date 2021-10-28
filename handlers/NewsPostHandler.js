@@ -109,7 +109,7 @@ class NewsPostHandler {
 
   static addLike (likeId, likeNo) {
 
-    return knex('views')
+    return knex('likes')
       .where('id', Validators.parseInteger(likeId, -1))
       .update({
         likes: likeNo + 1,

@@ -4,12 +4,11 @@
   "protocol" : "http",
   "secretKey": "secret",
   "database": {
-    "client": "pg",
+    "client": "mysql2",
     "connection": {
-      "host": "localhost",
-      "user": "postgres",
-      "password": "123",
-      "database": "test"
+      "database": "test_project",
+      "user": "root",
+      "password": "123"
     },
     "pool": {
       "min": 2,

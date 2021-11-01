@@ -13,7 +13,7 @@ class NewsPostManager {
 
     let user = await UserHandler.findUserByEmail(data && data.email);
 
-    let post = await NewsPostHandler.createPost(user.id, data);
+    let post = await NewsPostHandler.createPost(user && user.id, data);
 
     post = await NewsPostHandler.findPostbyId(post);
 
@@ -38,8 +38,8 @@ class NewsPostManager {
       let likes = await NewsPostHandler.getLikesOfPost(posts[i].id);
 
       posts[i].user = user;
-      posts[i].views = views[0].views;
-      posts[i].likes = likes[0].likes;
+      posts[i].views = views[0].views || 0;
+      posts[i].likes = likes[0].likes || 0;
 
     }
 
